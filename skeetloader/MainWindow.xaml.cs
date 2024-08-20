@@ -54,7 +54,6 @@ namespace skeetloader
 
             Rectangle bg = CS_BG;
             bg.Fill = bSelected ? new SolidColorBrush(Color.FromRgb(26, 26, 26)) : new SolidColorBrush(Color.FromRgb(35, 35, 35));
-            // Test
         }
     }
 }
