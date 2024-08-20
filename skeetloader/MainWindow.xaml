@@ -8,41 +8,64 @@
         MouseDown="Window_MouseDown"
         Title="MainWindow" Height="280" Width="400" WindowStyle="None" Background="{x:Null}" Foreground="{x:Null}" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid Width="400" Height="280">
-        <Rectangle HorizontalAlignment="Center" Height="280" VerticalAlignment="Center" Width="400" Fill="#FF272727" Stroke="Black"/>
-        <Rectangle HorizontalAlignment="Center" Height="270" VerticalAlignment="Center" Width="390" Fill="#FF121212" Stroke="Black"/>
-        <Rectangle HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="190" Fill="#FF232323" Stroke="Black" Margin="10,10,0,0"/>
-        <Rectangle HorizontalAlignment="Center" Height="165" VerticalAlignment="Top" Width="380" Fill="#FF171717" Stroke="Black" Margin="0,105,0,0"/>
-        <Rectangle x:Name="Launch_Rect" HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="185" Fill="#FF171717" Stroke="Black" Margin="205,10,0,0"/>
-        <Rectangle x:Name="Launch_Button" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="170" Fill="#FF1D1D1D" Stroke="Black" Margin="215,20,0,0" MouseDown="Load_Button_Clicked"/>
-        <Rectangle x:Name="Exit_button" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="170" Fill="#FF1D1D1D" Stroke="Black" Margin="215,60,0,0" MouseDown="Exit_Button_Clicked"/>
-        <Label Content="Load" HorizontalAlignment="Left" Margin="281,25,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="10"/>
-        <Label Content="Exit" HorizontalAlignment="Left" Margin="281,65,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="10"/>
-        <Label Content="Load" HorizontalAlignment="Left" Margin="281,25,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="10"/>
-        <Rectangle HorizontalAlignment="Center" Height="155" VerticalAlignment="Top" Width="370" Fill="#FF232323" Stroke="Black" Margin="0,110,0,0"/>
-        <RichTextBox x:Name="StatusBox" Margin="15,110,15,15" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontFamily="Verdana" FontSize="10" Opacity="1" IsReadOnly="True" IsEnabled="False">
-            <FlowDocument LineHeight="1">
-                <Paragraph>
-                    Connected...
-                </Paragraph>
-                <Paragraph>
-                    Welcome Back..
-                </Paragraph>
-            </FlowDocument>
-        </RichTextBox>
-        <Rectangle x:Name="CS_BG" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="190" Fill="#FF1A1A1A" Stroke="Black" Margin="10,10,0,0"/>
-        <Image HorizontalAlignment="Left" Height="27" Margin="15,15,0,0" VerticalAlignment="Top" Width="32" Source="/cs_logo.png"/>
-        <Label x:Name="CS_Name_Label" Content="Counter-Strike 2" HorizontalAlignment="Left" Margin="47,10,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF507617" FontFamily="Verdana" Height="25" Width="124"/>
-        <Label x:Name="update_label" Content="Updated 2024/08/20 1:43" HorizontalAlignment="Left" Margin="48,26,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="9"/>
-        <Rectangle x:Name="Selection" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" MouseDown="CS_Button_Clicked" Fill="Black" Opacity="0"/>
-        <Rectangle Margin="5,5,5,274" Height="3">
-            <Rectangle.Fill>
-                <LinearGradientBrush>
-                    <GradientStop Color="#FF00B9FF" Offset="0"/>
-                    <GradientStop Color="#FFE8FF00" Offset="1"/>
-                    <GradientStop Color="#FFFF01F7" Offset="0.5"/>
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
+
+        <Grid x:Name="main_grid">
+            <Rectangle HorizontalAlignment="Center" Height="280" VerticalAlignment="Center" Width="400" Fill="#FF272727" Stroke="Black"/>
+            <Rectangle HorizontalAlignment="Center" Height="270" VerticalAlignment="Center" Width="390" Fill="#FF121212" Stroke="Black"/>
+            <Rectangle HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="190" Fill="#FF232323" Stroke="Black" Margin="10,10,0,0"/>
+            <Rectangle HorizontalAlignment="Center" Height="165" VerticalAlignment="Top" Width="380" Fill="#FF171717" Stroke="Black" Margin="0,105,0,0"/>
+            <Rectangle x:Name="Launch_Rect" HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="185" Fill="#FF171717" Stroke="Black" Margin="205,10,0,0"/>
+            <Rectangle x:Name="Launch_Button" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="170" Fill="#FF1D1D1D" Stroke="Black" Margin="215,20,0,0" MouseDown="Load_Button_Clicked"/>
+            <Rectangle x:Name="Exit_button" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="170" Fill="#FF1D1D1D" Stroke="Black" Margin="215,60,0,0" MouseDown="Exit_Button_Clicked"/>
+            <Label Content="Load" HorizontalAlignment="Left" Margin="281,25,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="10"/>
+            <Label Content="Exit" HorizontalAlignment="Left" Margin="281,65,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="10"/>
+            <Label Content="Load" HorizontalAlignment="Left" Margin="281,25,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="10"/>
+            <Rectangle HorizontalAlignment="Center" Height="155" VerticalAlignment="Top" Width="370" Fill="#FF232323" Stroke="Black" Margin="0,110,0,0"/>
+            <RichTextBox x:Name="StatusBox" Margin="15,110,15,15" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontFamily="Verdana" FontSize="10" Opacity="1" IsReadOnly="True" IsEnabled="False">
+                <FlowDocument LineHeight="1">
+                    <Paragraph>
+                        <Run Text="Connected..."/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Run Text="Welcome Back.."/>
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+            <Rectangle x:Name="CS_BG" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="190" Fill="#FF1A1A1A" Stroke="Black" Margin="10,10,0,0"/>
+            <Image HorizontalAlignment="Left" Height="27" Margin="15,15,0,0" VerticalAlignment="Top" Width="32" Source="/cs_logo.png"/>
+            <Label x:Name="CS_Name_Label" Content="Counter-Strike 2" HorizontalAlignment="Left" Margin="47,10,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF507617" FontFamily="Verdana" Height="25" Width="124"/>
+            <Label x:Name="update_label" Content="Updated 2024/08/20 1:43" HorizontalAlignment="Left" Margin="48,26,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="9"/>
+            <Rectangle x:Name="Selection" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" MouseDown="CS_Button_Clicked" Fill="Black" Opacity="0"/>
+            <Rectangle Margin="5,5,5,272" Height="3">
+                <Rectangle.Fill>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#FF00B9FF" Offset="0"/>
+                        <GradientStop Color="#FFE8FF00" Offset="1"/>
+                        <GradientStop Color="#FFFF01F7" Offset="0.5"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+        </Grid>
+
+        <Grid x:Name="login_grid">
+            <Rectangle HorizontalAlignment="Center" Height="280" VerticalAlignment="Center" Width="400" Fill="#FF272727" Stroke="Black"/>
+            <Rectangle HorizontalAlignment="Center" Height="270" VerticalAlignment="Center" Width="390" Fill="#FF121212" Stroke="Black"/>
+            <Rectangle Margin="5,5,5,272" Height="3">
+                <Rectangle.Fill>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#FF00B9FF" Offset="0"/>
+                        <GradientStop Color="#FFE8FF00" Offset="1"/>
+                        <GradientStop Color="#FFFF01F7" Offset="0.5"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="exit_button" HorizontalAlignment="Center" Height="32" VerticalAlignment="Top" Width="170" Fill="#FF1D1D1D" Stroke="Black" Margin="0,223,0,0" MouseDown="Exit_Button_Clicked"/>
+            <Label Content="Exit" HorizontalAlignment="Center" Margin="0,228,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="10"/>
+            <Rectangle x:Name="Login_Button" HorizontalAlignment="Center" Height="32" VerticalAlignment="Top" Width="170" Fill="#FF1D1D1D" Stroke="Black" Margin="0,175,0,0" MouseDown="Login_Button_Clicked"/>
+            <Label Content="Login" HorizontalAlignment="Center" Margin="0,180,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="10"/>
+            <TextBox x:Name="username_box" HorizontalAlignment="Center" VerticalAlignment="Top" Width="170" Height="25" BorderBrush="Black" Background="#FF222222" Foreground="#FF888888" Margin="0,87,0,0" CaretBrush="#FF354A1A" FontFamily="Verdana" FontSize="10" LostKeyboardFocus="username_box_lost_keyboard" IsKeyboardFocusedChanged="username_box_capture" MaxLines="1" MaxLength="25" IsUndoEnabled="False"/>
+            <PasswordBox x:Name="password_box" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Background="#FF222222" BorderBrush="Black" CaretBrush="#FF354A1A" Foreground="#FF888888" IsKeyboardFocusedChanged="password_box_capture" LostKeyboardFocus="password_box_lost_keyboard" Height="24" FontSize="14" FontFamily="Verdana"/>
+        </Grid>
 
     </Grid>
 </Window>
