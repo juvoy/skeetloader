@@ -34,6 +34,15 @@
         <Label x:Name="CS_Name_Label" Content="Counter-Strike 2" HorizontalAlignment="Left" Margin="47,10,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF507617" FontFamily="Verdana" Height="25" Width="124"/>
         <Label x:Name="update_label" Content="Updated 2024/08/20 1:43" HorizontalAlignment="Left" Margin="48,26,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="9"/>
         <Rectangle x:Name="Selection" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" MouseDown="CS_Button_Clicked" Fill="Black" Opacity="0"/>
+        <Rectangle Margin="5,5,5,274" Height="3">
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="#FF00B9FF" Offset="0"/>
+                    <GradientStop Color="#FFE8FF00" Offset="1"/>
+                    <GradientStop Color="#FFFF01F7" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
 
     </Grid>
 </Window>
