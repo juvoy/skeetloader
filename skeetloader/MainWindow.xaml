@@ -1,0 +1,39 @@
+﻿<Window x:Class="skeetloader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:skeetloader"
+        mc:Ignorable="d"
+        MouseDown="Window_MouseDown"
+        Title="MainWindow" Height="280" Width="400" WindowStyle="None" Background="{x:Null}" Foreground="{x:Null}" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Width="400" Height="280">
+        <Rectangle HorizontalAlignment="Center" Height="280" VerticalAlignment="Center" Width="400" Fill="#FF272727" Stroke="Black"/>
+        <Rectangle HorizontalAlignment="Center" Height="270" VerticalAlignment="Center" Width="390" Fill="#FF121212" Stroke="Black"/>
+        <Rectangle HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="190" Fill="#FF232323" Stroke="Black" Margin="10,10,0,0"/>
+        <Rectangle HorizontalAlignment="Center" Height="165" VerticalAlignment="Top" Width="380" Fill="#FF171717" Stroke="Black" Margin="0,105,0,0"/>
+        <Rectangle x:Name="Launch_Rect" HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="185" Fill="#FF171717" Stroke="Black" Margin="205,10,0,0"/>
+        <Rectangle x:Name="Launch_Button" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="125" Fill="#FF1D1D1D" Stroke="Black" Margin="235,20,0,0" MouseDown="Load_Button_Clicked"/>
+        <Rectangle x:Name="Exit_button" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="125" Fill="#FF1D1D1D" Stroke="Black" Margin="235,60,0,0" MouseDown="Exit_Button_Clicked"/>
+        <Label Content="Load" HorizontalAlignment="Left" Margin="281,25,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="10"/>
+        <Label Content="Exit" HorizontalAlignment="Left" Margin="281,65,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="10"/>
+        <Label Content="Load" HorizontalAlignment="Left" Margin="281,25,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="10"/>
+        <Rectangle HorizontalAlignment="Center" Height="155" VerticalAlignment="Top" Width="370" Fill="#FF232323" Stroke="Black" Margin="0,110,0,0"/>
+        <RichTextBox x:Name="StatusBox" Margin="15,110,15,15" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontFamily="Verdana" FontSize="10" Opacity="1" IsReadOnly="True" IsEnabled="False">
+            <FlowDocument LineHeight="1">
+                <Paragraph>
+                    Connected...
+                </Paragraph>
+                <Paragraph>
+                    Welcome Back..
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Rectangle x:Name="CS_BG" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="190" Fill="#FF1A1A1A" Stroke="Black" Margin="10,10,0,0"/>
+        <Image HorizontalAlignment="Left" Height="27" Margin="15,15,0,0" VerticalAlignment="Top" Width="32" Source="/cs_logo.png"/>
+        <Label x:Name="CS_Name_Label" Content="Counter-Strike 2" HorizontalAlignment="Left" Margin="47,10,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF507617" FontFamily="Verdana" Height="25" Width="124"/>
+        <Label x:Name="update_label" Content="Updated 2024/08/20 1:43" HorizontalAlignment="Left" Margin="48,26,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="9"/>
+        <Rectangle x:Name="Selection" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" MouseDown="CS_Button_Clicked" Fill="Black" Opacity="0"/>
+
+    </Grid>
+</Window>
