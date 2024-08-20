@@ -43,6 +43,9 @@ namespace skeetloader
 
         private void Load_Button_Clicked(object sender, MouseButtonEventArgs e)
         {
+            if (!bSelected)
+                return;
+
             Run r = new Run("Waiting for CS:GO");
             r.Foreground = new SolidColorBrush(Color.FromRgb(80, 118, 32));
 
@@ -59,7 +62,8 @@ namespace skeetloader
             Rectangle bg = CS_BG;
             bg.Fill = bSelected ? new SolidColorBrush(Color.FromRgb(26, 26, 26)) : new SolidColorBrush(Color.FromRgb(35, 35, 35));
 
-            Launch_Button.IsEnabled = bSelected;
+            Launch_Button_BG.Fill = bSelected ? new SolidColorBrush(Color.FromRgb(29, 29, 29)) : new SolidColorBrush(Color.FromRgb(35, 35, 35));
+            Launch_Button_BG.IsEnabled = bSelected;
         }
 
         private void Login_Button_Clicked(object sender, MouseButtonEventArgs e)

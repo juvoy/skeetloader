@@ -15,11 +15,10 @@
             <Rectangle HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="190" Fill="#FF232323" Stroke="Black" Margin="10,10,0,0"/>
             <Rectangle HorizontalAlignment="Center" Height="165" VerticalAlignment="Top" Width="380" Fill="#FF171717" Stroke="Black" Margin="0,105,0,0"/>
             <Rectangle x:Name="Launch_Rect" HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="185" Fill="#FF171717" Stroke="Black" Margin="205,10,0,0"/>
-            <Rectangle x:Name="Launch_Button" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="170" Fill="#FF1D1D1D" Stroke="Black" Margin="215,20,0,0" MouseDown="Load_Button_Clicked"/>
-            <Rectangle x:Name="Exit_button" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="170" Fill="#FF1D1D1D" Stroke="Black" Margin="215,60,0,0" MouseDown="Exit_Button_Clicked"/>
-            <Label Content="Load" HorizontalAlignment="Left" Margin="281,25,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="10"/>
+            <Rectangle x:Name="Launch_Button_BG" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="170" Fill="#FF1D1D1D" Stroke="Black" Margin="215,20,0,0" MouseDown="Load_Button_Clicked"/>
+            <Rectangle x:Name="Exit_button_BG" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="170" Fill="#FF1D1D1D" Stroke="Black" Margin="215,60,0,0" MouseDown="Exit_Button_Clicked"/>
             <Label Content="Exit" HorizontalAlignment="Left" Margin="281,65,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="10"/>
-            <Label Content="Load" HorizontalAlignment="Left" Margin="281,25,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="10"/>
+            <Label Content="Load" HorizontalAlignment="Left" Margin="279,25,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="10"/>
             <Rectangle HorizontalAlignment="Center" Height="155" VerticalAlignment="Top" Width="370" Fill="#FF232323" Stroke="Black" Margin="0,110,0,0"/>
             <RichTextBox x:Name="StatusBox" Margin="15,110,15,15" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontFamily="Verdana" FontSize="10" Opacity="1" IsReadOnly="True" IsEnabled="False">
                 <FlowDocument LineHeight="1">
@@ -45,9 +44,11 @@
                     </LinearGradientBrush>
                 </Rectangle.Fill>
             </Rectangle>
+            <Rectangle x:Name="Launch_Button" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="170" Fill="#FF1D1D1D" Stroke="Black" Margin="215,20,0,0" MouseDown="Load_Button_Clicked" Opacity="0"/>
+            <Rectangle x:Name="Exit_button" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="170" Fill="#FF1D1D1D" Stroke="Black" Margin="215,60,0,0" MouseDown="Exit_Button_Clicked" Opacity="0"/>
         </Grid>
 
-        <Grid x:Name="login_grid">
+        <Grid x:Name="login_grid" d:IsHidden="True">
             <Rectangle HorizontalAlignment="Center" Height="280" VerticalAlignment="Center" Width="400" Fill="#FF272727" Stroke="Black"/>
             <Rectangle HorizontalAlignment="Center" Height="270" VerticalAlignment="Center" Width="390" Fill="#FF121212" Stroke="Black"/>
             <Rectangle Margin="5,5,5,272" Height="3">
@@ -59,14 +60,16 @@
                     </LinearGradientBrush>
                 </Rectangle.Fill>
             </Rectangle>
-            <Rectangle x:Name="exit_button" HorizontalAlignment="Center" Height="32" VerticalAlignment="Top" Width="170" Fill="#FF1D1D1D" Stroke="Black" Margin="0,223,0,0" MouseDown="Exit_Button_Clicked"/>
+            <Rectangle x:Name="exit_button_bg" HorizontalAlignment="Center" Height="32" VerticalAlignment="Top" Width="170" Fill="#FF1D1D1D" Stroke="Black" Margin="0,223,0,0" MouseDown="Exit_Button_Clicked"/>
             <Label Content="Exit" HorizontalAlignment="Center" Margin="0,228,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="10"/>
-            <Rectangle x:Name="Login_Button" HorizontalAlignment="Center" Height="32" VerticalAlignment="Top" Width="170" Fill="#FF1D1D1D" Stroke="Black" Margin="0,175,0,0" MouseDown="Login_Button_Clicked"/>
+            <Rectangle x:Name="Login_BG" HorizontalAlignment="Center" Height="32" VerticalAlignment="Top" Width="170" Fill="#FF1D1D1D" Stroke="Black" Margin="0,175,0,0" MouseDown="Login_Button_Clicked"/>
             <Label Content="Login" HorizontalAlignment="Center" Margin="0,180,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="10"/>
             <TextBox x:Name="username_box" HorizontalAlignment="Center" Width="170" Height="25" BorderBrush="Black" Background="#FF222222" Foreground="#FF888888" Margin="0,82,0,0" CaretBrush="#FF354A1A" FontFamily="Verdana" FontSize="10" LostKeyboardFocus="username_box_lost_keyboard" IsKeyboardFocusedChanged="username_box_capture" MaxLines="1" MaxLength="25" IsUndoEnabled="False" VerticalAlignment="Top" Padding="0,5,0,0"/>
             <PasswordBox x:Name="password_box" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Background="#FF222222" BorderBrush="Black" CaretBrush="#FF354A1A" Foreground="#FF888888" IsKeyboardFocusedChanged="password_box_capture" LostKeyboardFocus="password_box_lost_keyboard" Height="24" FontSize="14" FontFamily="Verdana"/>
             <Label Content="username" HorizontalAlignment="Left" Margin="115,60,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="10" Height="22" Width="64"/>
             <Label Content="password" HorizontalAlignment="Left" Margin="115,106,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="10"/>
+            <Rectangle x:Name="Login_Button" HorizontalAlignment="Center" Height="32" VerticalAlignment="Top" Width="170" Fill="#FF1D1D1D" Stroke="Black" Margin="0,175,0,0" MouseDown="Login_Button_Clicked" Opacity="0"/>
+            <Rectangle x:Name="exit_button" HorizontalAlignment="Center" Height="32" VerticalAlignment="Top" Width="170" Fill="#FF1D1D1D" Stroke="Black" Margin="0,223,0,0" MouseDown="Exit_Button_Clicked" Opacity="0" RadiusX="5" RadiusY="5"/>
         </Grid>
 
     </Grid>
