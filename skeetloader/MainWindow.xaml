@@ -45,7 +45,7 @@
             <Rectangle x:Name="Exit_button" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="170" Fill="#FF1D1D1D" Stroke="Black" Margin="215,60,0,0" MouseDown="Exit_Button_Clicked" Opacity="0"/>
         </Grid>
 
-        <Grid x:Name="login_grid" d:IsHidden="True">
+        <Grid x:Name="login_grid">
             <Rectangle HorizontalAlignment="Center" Height="280" VerticalAlignment="Center" Width="400" Fill="#FF272727" Stroke="Black"/>
             <Rectangle HorizontalAlignment="Center" Height="270" VerticalAlignment="Center" Width="390" Fill="#FF121212" Stroke="Black"/>
             <Rectangle Margin="5,5,5,272" Height="3">
@@ -62,7 +62,7 @@
             <Rectangle x:Name="Login_BG" HorizontalAlignment="Center" Height="32" VerticalAlignment="Top" Width="170" Fill="#FF1D1D1D" Stroke="Black" Margin="0,175,0,0" MouseDown="Login_Button_Clicked"/>
             <Label Content="Login" HorizontalAlignment="Center" Margin="0,180,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="10"/>
             <TextBox x:Name="username_box" HorizontalAlignment="Center" Width="170" Height="25" BorderBrush="Black" Background="#FF222222" Foreground="#FF888888" Margin="0,82,0,0" CaretBrush="#FF354A1A" FontFamily="Verdana" FontSize="10" MaxLines="1" MaxLength="25" IsUndoEnabled="False" VerticalAlignment="Top" Padding="0,5,0,0"/>
-            <PasswordBox x:Name="password_box" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Background="#FF222222" BorderBrush="Black" CaretBrush="#FF354A1A" Foreground="#FF888888" Height="24" FontSize="14" FontFamily="Verdana"/>
+            <PasswordBox x:Name="password_box" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Background="#FF222222" BorderBrush="Black" CaretBrush="#FF354A1A" Foreground="#FF888888" Height="24" FontSize="14" FontFamily="Verdana" Padding="0,3,0,0"/>
             <Label Content="username" HorizontalAlignment="Left" Margin="115,60,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="10" Height="22" Width="64"/>
             <Label Content="password" HorizontalAlignment="Left" Margin="115,106,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="10"/>
             <Rectangle x:Name="Login_Button" HorizontalAlignment="Center" Height="32" VerticalAlignment="Top" Width="170" Fill="#FF1D1D1D" Stroke="Black" Margin="0,175,0,0" MouseDown="Login_Button_Clicked" Opacity="0"/>
