@@ -26,6 +26,8 @@ namespace skeetloader
 
             main_grid.Visibility = Visibility.Hidden;
             login_grid.Visibility = Visibility.Visible;
+
+
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -59,8 +61,7 @@ namespace skeetloader
 
             CS_Name_Label.Foreground = bSelected ? new SolidColorBrush(Color.FromRgb(80, 118, 32)) : Brushes.White;
 
-            Rectangle bg = CS_BG;
-            bg.Fill = bSelected ? new SolidColorBrush(Color.FromRgb(26, 26, 26)) : new SolidColorBrush(Color.FromRgb(35, 35, 35));
+            CS_BG.Fill = bSelected ? new SolidColorBrush(Color.FromRgb(26, 26, 26)) : new SolidColorBrush(Color.FromRgb(35, 35, 35));
 
             Launch_Button_BG.Fill = bSelected ? new SolidColorBrush(Color.FromRgb(29, 29, 29)) : new SolidColorBrush(Color.FromRgb(35, 35, 35));
             Launch_Button_BG.IsEnabled = bSelected;
@@ -68,38 +69,19 @@ namespace skeetloader
 
         private void Login_Button_Clicked(object sender, MouseButtonEventArgs e)
         {
+            Authorization auth = new Authorization(username_box.Text, password_box.Password);
+            if(!auth.Login())
+            {
+                MessageBox.Show("Wrong credentials");
+                return;
+            }
+
+
+            StatusBox.Document.Blocks.Add(new Paragraph(new Run("Welcome back, " + auth.GetUsername())));
+
             main_grid.Visibility = Visibility.Visible;
             login_grid.Visibility = Visibility.Hidden;
         }
 
-        private void username_box_capture(object sender, DependencyPropertyChangedEventArgs e)
-        {
-        }
-
-        private void username_hint(object sender, MouseButtonEventArgs e)
-        {
-            username_box.CaptureMouse();
-        }
-
-        private void username_box_lost_keyboard(object sender, KeyboardFocusChangedEventArgs e)
-        {
-            if (string.IsNullOrEmpty(username_box.Text))
-            {
-     }
-        }
-
-        private void password_hint(object sender, MouseButtonEventArgs e)
-        {
-            password_box.CaptureMouse();
-        }
-
-        private void password_box_capture(object sender, DependencyPropertyChangedEventArgs e)
-        {
-        }
-
-        private void password_box_lost_keyboard(object sender, KeyboardFocusChangedEventArgs e)
-        {
-
-        }
     }
 }

@@ -25,9 +25,6 @@
                     <Paragraph>
                         <Run Text="Connected..."/>
                     </Paragraph>
-                    <Paragraph>
-                        <Run Text="Welcome Back.."/>
-                    </Paragraph>
                 </FlowDocument>
             </RichTextBox>
             <Rectangle x:Name="CS_BG" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="190" Fill="#FF1A1A1A" Stroke="Black" Margin="10,10,0,0"/>
@@ -64,8 +61,8 @@
             <Label Content="Exit" HorizontalAlignment="Center" Margin="0,228,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="10"/>
             <Rectangle x:Name="Login_BG" HorizontalAlignment="Center" Height="32" VerticalAlignment="Top" Width="170" Fill="#FF1D1D1D" Stroke="Black" Margin="0,175,0,0" MouseDown="Login_Button_Clicked"/>
             <Label Content="Login" HorizontalAlignment="Center" Margin="0,180,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="10"/>
-            <TextBox x:Name="username_box" HorizontalAlignment="Center" Width="170" Height="25" BorderBrush="Black" Background="#FF222222" Foreground="#FF888888" Margin="0,82,0,0" CaretBrush="#FF354A1A" FontFamily="Verdana" FontSize="10" LostKeyboardFocus="username_box_lost_keyboard" IsKeyboardFocusedChanged="username_box_capture" MaxLines="1" MaxLength="25" IsUndoEnabled="False" VerticalAlignment="Top" Padding="0,5,0,0"/>
-            <PasswordBox x:Name="password_box" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Background="#FF222222" BorderBrush="Black" CaretBrush="#FF354A1A" Foreground="#FF888888" IsKeyboardFocusedChanged="password_box_capture" LostKeyboardFocus="password_box_lost_keyboard" Height="24" FontSize="14" FontFamily="Verdana"/>
+            <TextBox x:Name="username_box" HorizontalAlignment="Center" Width="170" Height="25" BorderBrush="Black" Background="#FF222222" Foreground="#FF888888" Margin="0,82,0,0" CaretBrush="#FF354A1A" FontFamily="Verdana" FontSize="10" MaxLines="1" MaxLength="25" IsUndoEnabled="False" VerticalAlignment="Top" Padding="0,5,0,0"/>
+            <PasswordBox x:Name="password_box" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Background="#FF222222" BorderBrush="Black" CaretBrush="#FF354A1A" Foreground="#FF888888" Height="24" FontSize="14" FontFamily="Verdana"/>
             <Label Content="username" HorizontalAlignment="Left" Margin="115,60,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="10" Height="22" Width="64"/>
             <Label Content="password" HorizontalAlignment="Left" Margin="115,106,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="10"/>
             <Rectangle x:Name="Login_Button" HorizontalAlignment="Center" Height="32" VerticalAlignment="Top" Width="170" Fill="#FF1D1D1D" Stroke="Black" Margin="0,175,0,0" MouseDown="Login_Button_Clicked" Opacity="0"/>
