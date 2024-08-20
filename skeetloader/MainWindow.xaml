@@ -13,8 +13,8 @@
         <Rectangle HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="190" Fill="#FF232323" Stroke="Black" Margin="10,10,0,0"/>
         <Rectangle HorizontalAlignment="Center" Height="165" VerticalAlignment="Top" Width="380" Fill="#FF171717" Stroke="Black" Margin="0,105,0,0"/>
         <Rectangle x:Name="Launch_Rect" HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="185" Fill="#FF171717" Stroke="Black" Margin="205,10,0,0"/>
-        <Rectangle x:Name="Launch_Button" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="125" Fill="#FF1D1D1D" Stroke="Black" Margin="235,20,0,0" MouseDown="Load_Button_Clicked"/>
-        <Rectangle x:Name="Exit_button" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="125" Fill="#FF1D1D1D" Stroke="Black" Margin="235,60,0,0" MouseDown="Exit_Button_Clicked"/>
+        <Rectangle x:Name="Launch_Button" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="170" Fill="#FF1D1D1D" Stroke="Black" Margin="215,20,0,0" MouseDown="Load_Button_Clicked"/>
+        <Rectangle x:Name="Exit_button" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="170" Fill="#FF1D1D1D" Stroke="Black" Margin="215,60,0,0" MouseDown="Exit_Button_Clicked"/>
         <Label Content="Load" HorizontalAlignment="Left" Margin="281,25,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="10"/>
         <Label Content="Exit" HorizontalAlignment="Left" Margin="281,65,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="10"/>
         <Label Content="Load" HorizontalAlignment="Left" Margin="281,25,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="Verdana" FontSize="10"/>
