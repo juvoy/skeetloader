@@ -78,6 +78,7 @@ namespace skeetloader
 
 
             StatusBox.Document.Blocks.Add(new Paragraph(new Run("Welcome back, " + auth.GetUsername())));
+            StatusBox.Document.Blocks.Add(new Paragraph(new Run("Added Counter-Strike 2 (30 days remaining)")));
 
             main_grid.Visibility = Visibility.Visible;
             login_grid.Visibility = Visibility.Hidden;
