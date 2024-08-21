@@ -29,5 +29,12 @@ namespace skeetloader
         {
             return username;
         }
+
+        public int GetSubscription()
+        {
+            if (instance == null)
+                return 0;
+            return 30;
+        }
     }
 }
