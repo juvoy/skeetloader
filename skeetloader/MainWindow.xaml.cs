@@ -84,5 +84,24 @@ namespace skeetloader
             login_grid.Visibility = Visibility.Hidden;
         }
 
+        private void username_box_preview_text_input(object sender, TextCompositionEventArgs e)
+        {
+            if(e.Text.Contains(" "))
+            {
+                e.Handled = true;
+            }
+            MessageBox.Show(e.Text);
+        }
+
+        private void username_box_preview_key_down(object sender, KeyEventArgs e) // Someday should be renamed to text_box_cancel_input used for both username_box and password_box
+        {
+            // Check if the key pressed is a space or tab
+            if (e.Key == Key.Space || e.Key == Key.Tab)
+            {
+                e.Handled = true; // Prevent the space or tab from being added to the TextBox
+            }
+        }
+
+        
     }
 }
