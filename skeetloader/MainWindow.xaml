@@ -45,7 +45,7 @@
             <Rectangle x:Name="Exit_button" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="170" Fill="#FF1D1D1D" Stroke="Black" Margin="215,60,0,0" MouseDown="Exit_Button_Clicked" Opacity="0"/>
         </Grid>
 
-        <Grid x:Name="login_grid">
+        <Grid x:Name="login_grid" d:IsHidden="True">
             <Rectangle HorizontalAlignment="Center" Height="280" VerticalAlignment="Center" Width="400" Fill="#FF272727" Stroke="Black"/>
             <Rectangle HorizontalAlignment="Center" Height="270" VerticalAlignment="Center" Width="390" Fill="#FF121212" Stroke="Black"/>
             <Rectangle Margin="5,5,5,272" Height="3">

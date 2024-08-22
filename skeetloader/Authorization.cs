@@ -22,6 +22,13 @@ namespace skeetloader
         public bool Login()
         {
             instance = this;
+
+            // Input Validation
+            if(string.IsNullOrWhiteSpace(this.username) && string.IsNullOrWhiteSpace(this.password))
+            {
+                return false;
+            }
+
             return true;
         }
 
@@ -34,6 +41,7 @@ namespace skeetloader
         {
             if (instance == null)
                 return 0;
+
             return 30;
         }
     }
